@@ -47,7 +47,7 @@ app.post('/', (req, res)=> {
     
   });
 });
-app.get('/', (req, res)=> {
+app.get('/log', (req, res)=> {
  
   user.find((err,doc)=> {
     

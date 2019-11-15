@@ -21,7 +21,7 @@ products:Products[]=[{name:'books',
 public files: any;
 
 ngOnInit(){
-  this.http.get('https://abiapp24.herokuapp.com/').subscribe((y:any) => {console.log(y)
+  this.http.get('https://abiapp24.herokuapp.com/log').subscribe((y:any) => {console.log(y)
   this.profiledetails=y}
   );
   
