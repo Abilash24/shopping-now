@@ -19,7 +19,7 @@ constructor(private http:HttpClient){}
    
  let headers = new HttpHeaders();
 headers = headers.set('Content-Type', 'application/json; charset=utf-8');
-    return this.http.post<any>('https://shopping--abilash24.repl.co',this.jData,{headers: headers}).pipe(
+    return this.http.post<any>('https://abiapp24.herokuapp.com',this.jData,{headers: headers}).pipe(
       
     );
  
@@ -31,7 +31,7 @@ headers = headers.set('Content-Type', 'application/json; charset=utf-8');
    let headers = new HttpHeaders();
 headers = headers.set('Content-Type', 'application/json; charset=utf-8');
  
-  return this.http.post<any>('https://shopping--abilash24.repl.co/login',this.jData,{headers: headers});
+  return this.http.post<any>('https://abiapp24.herokuapp.com/login',this.jData,{headers: headers});
   
  
   }
@@ -44,7 +44,7 @@ this.token=localStorage.getItem('token')
 };
 
   
- return this.http.get<boolean>('https://shopping--abilash24.repl.co/home',
+ return this.http.get<boolean>('https://abiapp24.herokuapp.com/home',
       httpOptions);
   
  

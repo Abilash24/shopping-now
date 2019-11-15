@@ -21,7 +21,7 @@ products:Products[]=[{name:'books',
 public files: any;
 
 ngOnInit(){
-  this.http.get('https://shopping--abilash24.repl.co/').subscribe((y:any) => {console.log(y)
+  this.http.get('https://abiapp24.herokuapp.com/').subscribe((y:any) => {console.log(y)
   this.profiledetails=y}
   );
   
@@ -62,7 +62,7 @@ ngOnInit(){
     
         formData.append("photo", this.files, this.files.name);
     
-    this.http.post('https://shopping--abilash24.repl.co/photo', formData).subscribe(x => console.log(x));
+    this.http.post('https://abiapp24.herokuapp.com/photo', formData).subscribe(x => console.log(x));
   }
 
 }
