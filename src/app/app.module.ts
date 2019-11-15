@@ -25,7 +25,7 @@ import { RegisterComponent } from './register/register.component';
   },{path:'customer',loadChildren:'./customer/customer/customer.module#CustomerModule'},
   {path:'login',component:LoginComponent},
   {path:'',component:LoginComponent}])],
-  declarations: [ AppComponent, HomeComponent, HomeComponent, LoginComponent, BooksComponent, PenComponent, RegisterComponent ],
+  declarations: [ AppComponent,HelloComponent, HomeComponent, HomeComponent, LoginComponent, BooksComponent, PenComponent, RegisterComponent ],
   bootstrap:    [ AppComponent ],
   providers:[AuthGuard, AuthService]
 })
