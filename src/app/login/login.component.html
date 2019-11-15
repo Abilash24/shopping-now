@@ -1,0 +1,52 @@
+
+
+
+<a routerLink="/register" class="btn btn-warning mx-5 border border-success mt-3 shadow-lg display-1"><h5>Register</h5></a>
+<div >
+<div class="row" style=" margin-top:20vh">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4 p-5 bg-primary shadow-lg border-sm border-success  rounded-lg" >
+    <div>
+      <div class="text-center m-1  ">
+        <h1>Login</h1>
+        <form [formGroup]="profileForm" (ngSubmit)='onSubmit(profileForm.value)' >
+          
+          
+
+          <div class=" m-2">
+            <input  id="username" class="form-control" placeholder="Username"
+              formControlName="username" minlength="4">
+
+              <div class="alert alert-danger" *ngIf="username.touched && username.errors?.required">Please enter username
+              </div>
+
+              <div class="alert alert-danger" *ngIf="username.touched && username.errors?.minlength">Please enter minimum 4 lettered name
+              </div>
+          </div>
+
+           <div class=" m-2">
+            <input type="password" id="password" class="form-control" placeholder="Password"
+              formControlName="password" minlength="4">
+
+              <div class="alert alert-danger" *ngIf="password.touched && password.errors?.required">Please enter password
+              </div>
+
+              <div class="alert alert-danger" *ngIf="password.touched && password.errors?.minlength">Please enter minimum 4 lettered name
+              </div>
+          </div>
+
+      
+
+          <div class="text-center w-0">
+            <input type="submit" class="btn btn-success w-75 m-2" value='Submit' [disabled]="profileForm.invalid" >
+          </div>
+          <div class="alert alert-danger" *ngIf="this.wrongpass">wrong password
+              </div>
+            
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+</div>
