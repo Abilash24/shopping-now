@@ -12,7 +12,7 @@ app.get('/', (req,res)=>{
     res.sendFile(path.join(__dirname,"/dist/front/index.html"));
 });
 
-app.use(express.static(__dirname+ "/dist/front"));
+app.use(express.static(__dirname+ "/dist/front/public/"));
 app.listen(process.env.PORT || 3000,()=>{console.log('server on')});
 
 
